@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" />
+  <title>Registro de ALumnos</title>
+  <link rel="stylesheet" href="../stely.css">
+  <script defer src="../script.js"></script>
+</head>
+
+<body>
+    <h1>Registro de Alumnos</h1>
+  <div class="login-page">
+    <div class="form">
+      <form class="login-form" id="registroAlumnoForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" value="" name="" id="nombre" >
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" value="" name="" id="apellido" >
+
+        <label for="apellido">Edad:</label>
+        <input type="text" value="" name="" id="edad" >
+        <button type="button" onclick="registrarAlumno()">Registrar Alumno</button>
+        
+
+        <!-- <button id="btn-submit" >login</button> -->
+      
+        <p class="" id="mensaje"></p>
+      </form>
+
+      <form id="inscripcionForm">
+        <label for="alumnoSelect">Seleccionar Alumno:</label>
+        <br>
+        <select id="alumnoSelect" required></select>
+<br>
+        <label for="clase">Clase:</label>
+        <input type="text" value="" name="" id="clase" >
+
+        <label for="calificacion">Calificación:</label>
+        <input type="text" id="calificacion" required>
+    
+        <button type="button" onclick="inscribirAlumno()">Inscribir Alumno</button>
+   <br>
+   <br>
+   <br>
+  <form id="grupoForm">
+    <label for="grupoNombre">Nombre del Grupo:</label>
+    <input type="text" id="grupoNombre" required>
+
+    <button type="button" onclick="crearGrupo()">Crear Grupo</button>
+</form>
+<br>
+<br>
+<form id="asignacionGrupoForm">
+    <label for="alumnoGrupoSelect">Seleccionar Alumno:</label>
+    <select id="alumnoGrupoSelect" required></select>
+<br>
+    <label for="grupoSelect">Seleccionar Grupo:</label>
+    <select id="grupoSelect" required></select>
+<br>
+    <button type="button" onclick="asignarAlumnoAGrupo()">Asignar a Grupo</button>
+</form>
+<br>
+<br>
+<form id="busquedaForm">
+    <label for="buscarNombre">Buscar por Nombre:</label>
+    <input type="text" id="buscarNombre">
+
+    <label for="buscarApellido">Buscar por Apellido:</label>
+    <input type="text" id="buscarApellido">
+
+    <button type="button" onclick="buscarAlumno()">Buscar</button>
+</form>
+<br>
+<form id="promedioAlumnoForm">
+    <label for="promedioAlumnoSelect">Seleccionar Alumno:</label>
+    <select id="promedioAlumnoSelect" required></select>
+<br>
+    <button type="button" onclick="obtenerPromedioAlumno()">Obtener Promedio</button>
+</form>
+<br>
+<form id="promedioGrupoForm">
+    <label for="promedioGrupoSelect">Seleccionar Grupo:</label>
+    <select id="promedioGrupoSelect" required></select>
+
+    <button type="button" onclick="obtenerPromedioGrupo()">Obtener Promedio</button>
+</form>
+<br>
+<form id="listaOrdenadaForm">
+    <label for="ordenAlumnosSelect">Ordenar Alumnos por Calificación:</label>
+    <select id="ordenAlumnosSelect" required>
+        <option value="ascendente">Ascendente</option>
+        <option value="descendente">Descendente</option>
+    </select>
+
+    <button type="button" onclick="obtenerListaOrdenada()">Obtener Lista</button>
+</form>
+
+</div>
+</div>
+  <div>
+    <h2>Alumnos Registrados</h2>
+    <ul id="alumnosList"></ul>
+    <!-- Tabla para mostrar la lista de alumnos -->
+<table id="alumnosTable">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Clase</th>
+            <th>Calificación</th>
+            <th>Grupo</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</div>
+
+<div>
+    <h2>Grupos</h2>
+    <ul id="gruposList"></ul>
+    <!-- Tabla para mostrar la lista de alumnos -->
+<table id="grupoTable">
+    <thead>
+        <tr>
+            <th>Grupo</th>
+            <th>Alumno</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</div>
+
+</body>
+
+</html>
